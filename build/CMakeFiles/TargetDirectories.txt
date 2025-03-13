@@ -1,0 +1,3 @@
+/Users/rohakdebnath/Desktop/OMS/build/CMakeFiles/OMS.dir
+/Users/rohakdebnath/Desktop/OMS/build/CMakeFiles/edit_cache.dir
+/Users/rohakdebnath/Desktop/OMS/build/CMakeFiles/rebuild_cache.dir

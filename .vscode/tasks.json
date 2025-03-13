@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build OMS with Clang",
+            "type": "shell",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c++17",
+                "-I/opt/homebrew/include",
+                "-I/opt/homebrew/opt/boost/include",
+                "-I/opt/homebrew/opt/openssl/include",
+                "-I/opt/homebrew/opt/curl/include",
+                "-L/opt/homebrew/lib",
+                "-lboost_system",
+                "-lssl",
+                "-lcurl",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}

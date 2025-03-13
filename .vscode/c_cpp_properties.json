@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/include",
+                "/opt/homebrew/opt/boost/include",
+                "/opt/homebrew/opt/openssl/include",
+                "/opt/homebrew/opt/curl/include",
+                "/usr/local/include"
+            ],
+            "defines": [
+                "ASIO_STANDALONE",
+                "_WEBSOCKETPP_CPP11_STL_",
+                "WEBSOCKETPP_STRICT_ANSI",
+                "BOOST_ASIO_NO_DEPRECATED"
+            ],
+            "compilerPath": "/usr/bin/clang++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+}
