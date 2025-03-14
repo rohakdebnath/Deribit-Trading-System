@@ -52,7 +52,15 @@ build cmake_object_order_depends_target_OMS: phony || .
 build CMakeFiles/OMS.dir/src/auth.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /Users/rohakdebnath/Desktop/OMS/src/auth.cpp || cmake_object_order_depends_target_OMS
   DEFINES = -DASIO_STANDALONE -DBOOST_ASIO_NO_DEPRECATED -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DWEBSOCKETPP_STRICT_ANSI -D_WEBSOCKETPP_CPP11_STL_
   DEP_FILE = CMakeFiles/OMS.dir/src/auth.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
+  FLAGS = -O0 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
+  INCLUDES = -I/Users/rohakdebnath/Desktop/OMS/include -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/openssl@3/3.4.1/include
+  OBJECT_DIR = CMakeFiles/OMS.dir
+  OBJECT_FILE_DIR = CMakeFiles/OMS.dir/src
+
+build CMakeFiles/OMS.dir/src/latency_tracker.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /Users/rohakdebnath/Desktop/OMS/src/latency_tracker.cpp || cmake_object_order_depends_target_OMS
+  DEFINES = -DASIO_STANDALONE -DBOOST_ASIO_NO_DEPRECATED -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DWEBSOCKETPP_STRICT_ANSI -D_WEBSOCKETPP_CPP11_STL_
+  DEP_FILE = CMakeFiles/OMS.dir/src/latency_tracker.cpp.o.d
+  FLAGS = -O0 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
   INCLUDES = -I/Users/rohakdebnath/Desktop/OMS/include -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/openssl@3/3.4.1/include
   OBJECT_DIR = CMakeFiles/OMS.dir
   OBJECT_FILE_DIR = CMakeFiles/OMS.dir/src
@@ -60,7 +68,7 @@ build CMakeFiles/OMS.dir/src/auth.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /User
 build CMakeFiles/OMS.dir/src/main.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /Users/rohakdebnath/Desktop/OMS/src/main.cpp || cmake_object_order_depends_target_OMS
   DEFINES = -DASIO_STANDALONE -DBOOST_ASIO_NO_DEPRECATED -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DWEBSOCKETPP_STRICT_ANSI -D_WEBSOCKETPP_CPP11_STL_
   DEP_FILE = CMakeFiles/OMS.dir/src/main.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
+  FLAGS = -O0 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
   INCLUDES = -I/Users/rohakdebnath/Desktop/OMS/include -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/openssl@3/3.4.1/include
   OBJECT_DIR = CMakeFiles/OMS.dir
   OBJECT_FILE_DIR = CMakeFiles/OMS.dir/src
@@ -68,7 +76,7 @@ build CMakeFiles/OMS.dir/src/main.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /User
 build CMakeFiles/OMS.dir/src/order_tracker.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /Users/rohakdebnath/Desktop/OMS/src/order_tracker.cpp || cmake_object_order_depends_target_OMS
   DEFINES = -DASIO_STANDALONE -DBOOST_ASIO_NO_DEPRECATED -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DWEBSOCKETPP_STRICT_ANSI -D_WEBSOCKETPP_CPP11_STL_
   DEP_FILE = CMakeFiles/OMS.dir/src/order_tracker.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
+  FLAGS = -O0 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
   INCLUDES = -I/Users/rohakdebnath/Desktop/OMS/include -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/openssl@3/3.4.1/include
   OBJECT_DIR = CMakeFiles/OMS.dir
   OBJECT_FILE_DIR = CMakeFiles/OMS.dir/src
@@ -76,7 +84,7 @@ build CMakeFiles/OMS.dir/src/order_tracker.cpp.o: CXX_COMPILER__OMS_unscanned_De
 build CMakeFiles/OMS.dir/src/rest_api.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /Users/rohakdebnath/Desktop/OMS/src/rest_api.cpp || cmake_object_order_depends_target_OMS
   DEFINES = -DASIO_STANDALONE -DBOOST_ASIO_NO_DEPRECATED -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DWEBSOCKETPP_STRICT_ANSI -D_WEBSOCKETPP_CPP11_STL_
   DEP_FILE = CMakeFiles/OMS.dir/src/rest_api.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
+  FLAGS = -O0 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
   INCLUDES = -I/Users/rohakdebnath/Desktop/OMS/include -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/openssl@3/3.4.1/include
   OBJECT_DIR = CMakeFiles/OMS.dir
   OBJECT_FILE_DIR = CMakeFiles/OMS.dir/src
@@ -84,7 +92,7 @@ build CMakeFiles/OMS.dir/src/rest_api.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /
 build CMakeFiles/OMS.dir/src/utils.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /Users/rohakdebnath/Desktop/OMS/src/utils.cpp || cmake_object_order_depends_target_OMS
   DEFINES = -DASIO_STANDALONE -DBOOST_ASIO_NO_DEPRECATED -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DWEBSOCKETPP_STRICT_ANSI -D_WEBSOCKETPP_CPP11_STL_
   DEP_FILE = CMakeFiles/OMS.dir/src/utils.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
+  FLAGS = -O0 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
   INCLUDES = -I/Users/rohakdebnath/Desktop/OMS/include -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/openssl@3/3.4.1/include
   OBJECT_DIR = CMakeFiles/OMS.dir
   OBJECT_FILE_DIR = CMakeFiles/OMS.dir/src
@@ -92,7 +100,7 @@ build CMakeFiles/OMS.dir/src/utils.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /Use
 build CMakeFiles/OMS.dir/src/websocket_client.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /Users/rohakdebnath/Desktop/OMS/src/websocket_client.cpp || cmake_object_order_depends_target_OMS
   DEFINES = -DASIO_STANDALONE -DBOOST_ASIO_NO_DEPRECATED -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DWEBSOCKETPP_STRICT_ANSI -D_WEBSOCKETPP_CPP11_STL_
   DEP_FILE = CMakeFiles/OMS.dir/src/websocket_client.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
+  FLAGS = -O0 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
   INCLUDES = -I/Users/rohakdebnath/Desktop/OMS/include -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/openssl@3/3.4.1/include
   OBJECT_DIR = CMakeFiles/OMS.dir
   OBJECT_FILE_DIR = CMakeFiles/OMS.dir/src
@@ -100,7 +108,7 @@ build CMakeFiles/OMS.dir/src/websocket_client.cpp.o: CXX_COMPILER__OMS_unscanned
 build CMakeFiles/OMS.dir/src/websocket_handler.cpp.o: CXX_COMPILER__OMS_unscanned_Debug /Users/rohakdebnath/Desktop/OMS/src/websocket_handler.cpp || cmake_object_order_depends_target_OMS
   DEFINES = -DASIO_STANDALONE -DBOOST_ASIO_NO_DEPRECATED -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -DFMT_SHARED -DSPDLOG_COMPILED_LIB -DSPDLOG_FMT_EXTERNAL -DSPDLOG_SHARED_LIB -DWEBSOCKETPP_STRICT_ANSI -D_WEBSOCKETPP_CPP11_STL_
   DEP_FILE = CMakeFiles/OMS.dir/src/websocket_handler.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
+  FLAGS = -O0 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0 -Wall -Wextra -pedantic
   INCLUDES = -I/Users/rohakdebnath/Desktop/OMS/include -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/openssl@3/3.4.1/include
   OBJECT_DIR = CMakeFiles/OMS.dir
   OBJECT_FILE_DIR = CMakeFiles/OMS.dir/src
@@ -113,8 +121,8 @@ build CMakeFiles/OMS.dir/src/websocket_handler.cpp.o: CXX_COMPILER__OMS_unscanne
 #############################################
 # Link the executable OMS
 
-build OMS: CXX_EXECUTABLE_LINKER__OMS_Debug CMakeFiles/OMS.dir/src/auth.cpp.o CMakeFiles/OMS.dir/src/main.cpp.o CMakeFiles/OMS.dir/src/order_tracker.cpp.o CMakeFiles/OMS.dir/src/rest_api.cpp.o CMakeFiles/OMS.dir/src/utils.cpp.o CMakeFiles/OMS.dir/src/websocket_client.cpp.o CMakeFiles/OMS.dir/src/websocket_handler.cpp.o | /opt/homebrew/lib/libboost_system.dylib /opt/homebrew/lib/libboost_thread.dylib /opt/homebrew/lib/libspdlog.1.15.1.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/lib/libcurl.tbd /opt/homebrew/Cellar/openssl@3/3.4.1/lib/libssl.dylib /opt/homebrew/Cellar/openssl@3/3.4.1/lib/libcrypto.dylib /opt/homebrew/lib/libjsoncpp.dylib /opt/homebrew/lib/libfmt.11.1.4.dylib
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0
+build OMS: CXX_EXECUTABLE_LINKER__OMS_Debug CMakeFiles/OMS.dir/src/auth.cpp.o CMakeFiles/OMS.dir/src/latency_tracker.cpp.o CMakeFiles/OMS.dir/src/main.cpp.o CMakeFiles/OMS.dir/src/order_tracker.cpp.o CMakeFiles/OMS.dir/src/rest_api.cpp.o CMakeFiles/OMS.dir/src/utils.cpp.o CMakeFiles/OMS.dir/src/websocket_client.cpp.o CMakeFiles/OMS.dir/src/websocket_handler.cpp.o | /opt/homebrew/lib/libboost_system.dylib /opt/homebrew/lib/libboost_thread.dylib /opt/homebrew/lib/libspdlog.1.15.1.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/lib/libcurl.tbd /opt/homebrew/Cellar/openssl@3/3.4.1/lib/libssl.dylib /opt/homebrew/Cellar/openssl@3/3.4.1/lib/libcrypto.dylib /opt/homebrew/lib/libjsoncpp.dylib /opt/homebrew/lib/libfmt.11.1.4.dylib
+  FLAGS = -O0 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.0
   LINK_LIBRARIES = -Wl,-rpath,/opt/homebrew/lib  /opt/homebrew/lib/libboost_system.dylib  /opt/homebrew/lib/libboost_thread.dylib  /opt/homebrew/lib/libspdlog.1.15.1.dylib  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/lib/libcurl.tbd  /opt/homebrew/Cellar/openssl@3/3.4.1/lib/libssl.dylib  /opt/homebrew/Cellar/openssl@3/3.4.1/lib/libcrypto.dylib  -lpthread  /opt/homebrew/lib/libjsoncpp.dylib  /opt/homebrew/lib/libfmt.11.1.4.dylib
   OBJECT_DIR = CMakeFiles/OMS.dir
   POST_BUILD = :

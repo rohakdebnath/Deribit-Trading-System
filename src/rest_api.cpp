@@ -8,6 +8,7 @@
 #include <curl/curl.h>
 #include <nlohmann/json.hpp>
 #include <global_vars.hpp>
+#include "latency_tracker.hpp"
 
 using json = nlohmann::json;
 using namespace std;
@@ -70,7 +71,9 @@ void placebuyorder(const string& access_token, const string& instrument_name, in
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writecallback);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
 
+    latency_tracker.start("REST");
     CURLcode res = curl_easy_perform(curl);
+    latency_tracker.stop("REST");
     if (res != CURLE_OK) {
         cerr << "CURL error (placeOrderPOST): " << curl_easy_strerror(res) << endl;
     } else {

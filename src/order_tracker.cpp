@@ -25,7 +25,7 @@ void log_order_event(const string& order_id, const string& event_type, const jso
         {"details", order_data}
     };
     order_log.push_back(log_entry);
-    cout << "[Order Event Logged] " << order_id << endl;
+    // cout << "[Order Event Logged] " << order_id << endl;
 }
 
 void add_open_order(const string& order_id, const json& order_data) {

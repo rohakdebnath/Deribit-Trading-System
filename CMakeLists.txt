@@ -20,6 +20,14 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/include
 )
 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type (Release or Debug)" FORCE)
+endif()
+
+set(CMAKE_CXX_FLAGS_RELEASE "-O2 -march=native -flto -DNDEBUG")
+set(CMAKE_EXE_LINKER_FLAGS_RELEASE "-flto")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
+
 file(GLOB SOURCES "src/*.cpp")
 
 add_executable(OMS ${SOURCES})

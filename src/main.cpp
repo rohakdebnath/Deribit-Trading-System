@@ -1,3 +1,5 @@
+#include <fstream>
+#include <sstream>
 #include <iostream>
 #include <string>
 #include "auth.hpp"
@@ -5,6 +7,7 @@
 #include "websocket_client.hpp"
 #include "order_tracker.hpp"
 #include "global_vars.hpp"
+#include "latency_tracker.hpp"
 
 using namespace std;
 
@@ -15,13 +18,28 @@ thread ws_thread;
 connection_hdl global_hdl;
 ws_client_t ws_client;
 atomic<bool> websocket_ready(false);
-atomic<bool> processing_last_message(false);
 
+unordered_map<string, string> load_config(const string& path) {
+    unordered_map<string, string> config;
+    ifstream infile(path);
+    string line;
+    while (getline(infile, line)) {
+        if (line.empty() || line[0] == '#') continue;
+        if (line[0] == '[') continue; 
+        auto delim_pos = line.find('=');
+        if (delim_pos == string::npos) continue;
+        string key = line.substr(0, delim_pos);
+        string value = line.substr(delim_pos + 1);
+        config[key] = value;
+    }
+    return config;
+}
 
 int main() {
-    string client_id = "ksZ7z6qT";
-    string client_secret = "WScAz-vem8DII2VD8DpAQbEc9TdmE2SYLAf0mIsB-DM";
+    auto config = load_config("config.ini");
 
+    string client_id = config["client_id"];
+    string client_secret = config["client_secret"];
     array<string, 2> tokens = gettoken(client_id, client_secret);
     access_token = tokens[0];
     // map<string, vector<string>> instruments = fetch_all_instruments();
@@ -33,15 +51,15 @@ int main() {
     //         cout << "   - " << name << endl;
     //     }
     // }
-
-    placebuyorder(access_token, "ETH-PERPETUAL", 40, "market", 0, "WS");
+    // placebuyorder(access_token, "ETH-PERPETUAL", 40, "market", 0, "REST");
     
     start_websocket_connection();
     while (!websocket_ready.load()) {
+        printf("hi");
         this_thread::sleep_for(chrono::milliseconds(10));
     }
     
-    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "WS");
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "WS");
 
     // cout << "[Main] Ready to send orders.\n";
 
@@ -146,8 +164,8 @@ int main() {
     //         cout << "Unknown command.\n";
     //     }
     // }
-    this_thread::sleep_for(chrono::milliseconds(3000));
-    stop_websocket_connection();
-    this_thread::sleep_for(chrono::milliseconds(3000));
+    this_thread::sleep_for(chrono::milliseconds(2000));
+
+    // latency_tracker.print_report();
     return 0;
 }

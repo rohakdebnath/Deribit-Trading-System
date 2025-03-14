@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "latency_tracker.hpp"
 
 using namespace std;
 using json = nlohmann::json;
@@ -82,8 +83,13 @@ void on_message(connection_hdl, client::message_ptr msg) {
         }
 
         if (parsed.contains("result") && parsed["result"].contains("order")) {
-
             const json& order = parsed["result"]["order"];
+            const string label = order.value("label", "unknown");
+            latency_tracker.stop(label); 
+            if (latency_tracker.get_entry_count() == 10) {
+                stop_websocket_connection();
+            }
+            
             const string order_id = order.value("order_id", "unknown");
             const string state = order.value("order_state", "unknown");
 

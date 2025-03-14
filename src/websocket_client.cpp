@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 #include "global_vars.hpp"
+#include "latency_tracker.hpp"
 
 using json = nlohmann::json;
 using namespace std;
@@ -29,6 +30,21 @@ void on_open(connection_hdl hdl) {
     websocket_ready.store(true);
     json heartbeat = { {"method", "public/set_heartbeat"}, {"params", { {"interval", 60} }}, {"id", 171} };
     send_via_event_loop(heartbeat.dump());
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "1");
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "2");
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "3");
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "4");
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "5");
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "6");
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "7");
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "8");
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "9");
+    send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "10");
+    // for (int i = 0; i < 30; ++i) {
+    //     string label = "WS_" + to_string(i);
+    //     this_thread::sleep_for(chrono::milliseconds(300)); // slight delay to avoid flooding Deribit
+    // }
+    
 }
 
 void start_websocket_connection() {
@@ -52,14 +68,14 @@ void start_websocket_connection() {
         return;
     }
     ws_client.connect(con);
-    ws_thread = std::thread([] {
-        try {
-            ws_client.run();
-        } catch (const std::exception& e) {
-            log_to_file(std::string("[WebSocket Run Error]: ") + e.what());
-        }
-    });
-    ws_thread.detach();
+    // ws_thread = std::thread([] {
+    //     try {
+    //     } catch (const std::exception& e) {
+    //         log_to_file(std::string("[WebSocket Run Error]: ") + e.what());
+    //     }
+    // });
+    ws_client.run();
+    // ws_thread.detach();
 }
 
 void subscribe_public_channel(const string& symbol) {
@@ -118,7 +134,8 @@ void send_ws_buy_order(const string& access_token, const string& instrument, int
     };
     if (type == "limit") msg["params"]["price"] = price;
     string payload = msg.dump();
-    ws_client.get_io_service().post([payload]() {
+    ws_client.get_io_service().post([payload, label]() {
+        latency_tracker.start(label);
         websocketpp::lib::error_code ec;
         ws_client.send(global_hdl, payload, websocketpp::frame::opcode::text, ec);
         if (ec) {
