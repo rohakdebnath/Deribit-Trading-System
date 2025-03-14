@@ -51,16 +51,27 @@ int main() {
     //         cout << "   - " << name << endl;
     //     }
     // }
-    // placebuyorder(access_token, "ETH-PERPETUAL", 40, "market", 0, "REST");
+    // for (int i = 0; i < 10; ++i) {
+    //     placebuyorder(access_token, "ETH-PERPETUAL", 40, "market", 0, to_string(i));
+    // }
     
     start_websocket_connection();
     while (!websocket_ready.load()) {
-        printf("hi");
         this_thread::sleep_for(chrono::milliseconds(10));
     }
     
-    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "WS");
-
+    // for (int i = 0; i < 10; ++i) {
+    //     send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, to_string(i));
+    // }
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "2");
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "3");
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "4");
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "5");
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "6");
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "7");
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "8");
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "9");
+    // send_ws_buy_order(access_token, "ETH-PERPETUAL", 40, "market", 0, "10");
     // cout << "[Main] Ready to send orders.\n";
 
     // string command;
@@ -164,8 +175,9 @@ int main() {
     //         cout << "Unknown command.\n";
     //     }
     // }
-    this_thread::sleep_for(chrono::milliseconds(2000));
-
-    // latency_tracker.print_report();
+    this_thread::sleep_for(chrono::milliseconds(3000));
+    stop_websocket_connection();
+    this_thread::sleep_for(chrono::milliseconds(3000));
+    // // latency_tracker.print_report();
     return 0;
 }
